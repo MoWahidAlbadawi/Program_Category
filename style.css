@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial , Tahoma;
+}
+:root {
+    --dark-color: #1b3255;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    background-color: #445979;
+    color: white;
+}
+.container {
+    margin: 20px;
+}
+.container .navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.navbar p {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+.icon-hillal {
+    background-color: transparent;
+    width: fit-content;
+    padding: 6px;
+    border: 1px solid #e9e94182;
+    border-radius: 11px;
+    font-size: 17px;
+    max-width: 100%;
+    position: relative;
+    color: white;
+}
+.done {
+    background-color: white;
+}
+.icon-hillal .on-ramadan , 
+.icon-hillal .off-ramadan {
+    margin: 10px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    width: 144px;
+    transition: .3s;
+    background-color: #e9e94182;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px;
+    opacity: .6;
+}
+.icon-hillal .off-ramadan {
+    opacity: .8;
+}
+.on {
+    transform: translateY(-2px);
+}
+.off {
+    transform: translateY(-150px);
+}
+.icon-hillal .icon {
+    cursor: pointer;
+}
+.icon-hillal:hover {
+    animation: clicked 1s linear;
+}
+.form {
+    padding: 20px;
+    background-color: var(--green-color);
+    margin: 3%;
+    text-align: center;
+    border-radius: 10px;
+    width: 94%;
+    height: 200px;
+    position: relative;
+}
+.form .label {
+    width: 100%;
+    display: block;
+    letter-spacing: 1px;
+    font-size: 20px;
+    position: absolute;
+    color: white;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form .number {
+    outline: none;
+    border: none;
+    background-color: #38595e;
+    padding: 10px;
+    border-radius: 6px;
+    width: 30%;
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form .number::placeholder {
+    padding: 2px;
+    color: white;
+    opacity: 0.6;
+}
+.form .number:focus {
+    outline: none;
+    border: 1px solid var(--section-color);
+}
+.form .ok {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--section-color);
+    padding: 10px;
+    border-radius: 32px;
+    color: var(--dark-color);
+    width: 15%;
+    outline: none;
+    font-size: 21px;
+    cursor: pointer;
+    width: 150px;
+    top: 65%;
+}
+.table {
+    opacity: 0;
+    position: relative;
+    margin-bottom: 100px;
+}
+table {
+    font-weight: bold;
+    border-spacing: 1px solid var(--section-color);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid var(--section-color);
+    text-transform: capitalize;
+    top: 20px;
+    margin-bottom: 10px;
+}
+table td {
+    background-color:  #258d89;
+    color: white;
+    text-align: center;
+}
+table th {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--dark-color);
+    color: white;
+}
+table td.active {
+    background-color: #d3a77fb5;
+}
+table span {
+    border-bottom: 1px solid var(--section-color);
+}
+table .nameC {
+    padding: 7px 0;
+    font-size: 15px;
+}
+.table .finishing {
+    text-align: center;
+    padding: 10px;
+    margin: 30px auto;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.table .finishing span {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+}
+.table .finishing span::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 34%;
+    left: -55%;
+    top: 3px;
+}
+.table .finishing .tho::before {
+    background-color: #258d89;
+}
+.table .finishing .wor::before {
+    background-color: #d3a77fb5;
+}
+@media(max-width:800px) {
+    .navbar p,
+    .icon-hillal {
+        font-size: 16px;
+    }
+    .form .number {
+        width: 70%;
+        max-width: 100%;
+    }
+    .form .ok {
+        width: 50%;
+        max-width: 100%;
+    }
+    table {
+        font-size: 9px;
+        height: 370px;
+        }
+        table td , 
+        table th {
+            font-size: 12px;
+            padding: 4px 8px;
+        }
+        .table .finishing {
+            margin: 20px auto;
+        }
+        .table .finishing span {
+            font-size: 13px;
+        }   
+        .table .finishing span::before {
+            width: 12px;
+            height: 12px;
+            top: 4px;
+        }
+        .icon-hillal .on-ramadan , 
+        .icon-hillal .off-ramadan {
+            font-size: 11px;
+            left: 17px;
+            width: 121px;
+            top: -9px;
+}
+}
+@media (min-width:801px) {
+    table td , 
+    table th{
+        padding: 15px 30px;
+        font-size: 19px;
+    }
+}
+@keyframes clicked {
+    0% {
+        font-size: 17px;
+    }
+    50% {
+        font-size: 40px;
+    }
+    100% {
+        font-size: 17px;
+    }
+}
